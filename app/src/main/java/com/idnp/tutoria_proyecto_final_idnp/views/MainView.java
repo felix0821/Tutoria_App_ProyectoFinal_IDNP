@@ -1,4 +1,4 @@
-package com.idnp.tutoria_proyecto_final_idnp.main;
+package com.idnp.tutoria_proyecto_final_idnp.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,12 +8,10 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.idnp.tutoria_proyecto_final_idnp.R;
-import com.idnp.tutoria_proyecto_final_idnp.forum.ForumView;
-import com.idnp.tutoria_proyecto_final_idnp.login.LoginView;
-import com.idnp.tutoria_proyecto_final_idnp.signup.SignUpView;
+import com.idnp.tutoria_proyecto_final_idnp.interfaces.Main;
+import com.idnp.tutoria_proyecto_final_idnp.interactors.MainPresenter;
 
 public class MainView extends AppCompatActivity implements Main.View {
 

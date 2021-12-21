@@ -1,4 +1,4 @@
-package com.idnp.tutoria_proyecto_final_idnp.secondregister;
+package com.idnp.tutoria_proyecto_final_idnp.views;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +24,8 @@ import com.google.android.gms.maps.SupportMapFragment;
 
 import com.idnp.tutoria_proyecto_final_idnp.R;
 import com.idnp.tutoria_proyecto_final_idnp.UsersSQLiteOpenHelper;
+import com.idnp.tutoria_proyecto_final_idnp.interfaces.SecondRegister;
+import com.idnp.tutoria_proyecto_final_idnp.presenters.SecondRegisterPresenter;
 
 import java.util.Locale;
 

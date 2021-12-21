@@ -9,7 +9,7 @@ import android.os.Build;
 
 import androidx.annotation.Nullable;
 
-import com.idnp.tutoria_proyecto_final_idnp.forum.Comment;
+import com.idnp.tutoria_proyecto_final_idnp.interactors.Comment;
 
 import java.util.ArrayList;
 

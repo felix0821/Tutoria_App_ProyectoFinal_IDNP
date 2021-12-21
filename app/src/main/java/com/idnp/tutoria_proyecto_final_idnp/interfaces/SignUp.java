@@ -1,4 +1,4 @@
-package com.idnp.tutoria_proyecto_final_idnp.signup;
+package com.idnp.tutoria_proyecto_final_idnp.interfaces;
 
 import com.idnp.tutoria_proyecto_final_idnp.UsersSQLiteOpenHelper;
 

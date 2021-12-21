@@ -1,8 +1,8 @@
-package com.idnp.tutoria_proyecto_final_idnp.forum;
+package com.idnp.tutoria_proyecto_final_idnp.interactors;
 
 import android.content.SharedPreferences;
 
-import java.util.ArrayList;
+import com.idnp.tutoria_proyecto_final_idnp.interfaces.Forum;
 
 public class ForumModel implements Forum.Model{
     private Forum.Presenter presenter;

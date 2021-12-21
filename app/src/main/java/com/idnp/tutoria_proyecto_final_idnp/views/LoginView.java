@@ -1,4 +1,4 @@
-package com.idnp.tutoria_proyecto_final_idnp.login;
+package com.idnp.tutoria_proyecto_final_idnp.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,15 +6,16 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.idnp.tutoria_proyecto_final_idnp.R;
 import com.idnp.tutoria_proyecto_final_idnp.UsersSQLiteOpenHelper;
+import com.idnp.tutoria_proyecto_final_idnp.interfaces.Login;
+import com.idnp.tutoria_proyecto_final_idnp.presenters.LoginPresenter;
 
-public class LoginView extends AppCompatActivity implements Login.View{
+public class LoginView extends AppCompatActivity implements Login.View {
 
     private EditText etUsername;
     private EditText etPassword;

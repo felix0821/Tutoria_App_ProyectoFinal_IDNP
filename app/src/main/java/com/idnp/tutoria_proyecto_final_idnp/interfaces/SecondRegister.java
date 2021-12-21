@@ -1,4 +1,4 @@
-package com.idnp.tutoria_proyecto_final_idnp.secondregister;
+package com.idnp.tutoria_proyecto_final_idnp.interfaces;
 
 import android.location.Geocoder;
 

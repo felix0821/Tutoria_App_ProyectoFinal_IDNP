@@ -1,4 +1,4 @@
-package com.idnp.tutoria_proyecto_final_idnp.secondregister;
+package com.idnp.tutoria_proyecto_final_idnp.interactors;
 
 import android.content.ContentValues;
 import android.database.Cursor;
@@ -11,6 +11,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.idnp.tutoria_proyecto_final_idnp.UsersSQLiteOpenHelper;
+import com.idnp.tutoria_proyecto_final_idnp.interfaces.SecondRegister;
 
 import java.io.IOException;
 import java.util.List;

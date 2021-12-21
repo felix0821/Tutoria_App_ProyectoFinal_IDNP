@@ -1,10 +1,11 @@
-package com.idnp.tutoria_proyecto_final_idnp.login;
+package com.idnp.tutoria_proyecto_final_idnp.interactors;
 
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.idnp.tutoria_proyecto_final_idnp.UsersSQLiteOpenHelper;
+import com.idnp.tutoria_proyecto_final_idnp.interfaces.Login;
 
 public class LoginModel implements Login.Model {
 

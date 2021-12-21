@@ -1,8 +1,10 @@
-package com.idnp.tutoria_proyecto_final_idnp.login;
+package com.idnp.tutoria_proyecto_final_idnp.presenters;
 
 import android.content.SharedPreferences;
 
 import com.idnp.tutoria_proyecto_final_idnp.UsersSQLiteOpenHelper;
+import com.idnp.tutoria_proyecto_final_idnp.interfaces.Login;
+import com.idnp.tutoria_proyecto_final_idnp.interactors.LoginModel;
 
 public class LoginPresenter implements Login.Presenter{
 

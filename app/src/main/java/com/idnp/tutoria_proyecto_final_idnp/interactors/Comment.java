@@ -1,4 +1,4 @@
-package com.idnp.tutoria_proyecto_final_idnp.forum;
+package com.idnp.tutoria_proyecto_final_idnp.interactors;
 
 public class Comment {
     String user;

@@ -1,4 +1,4 @@
-package com.idnp.tutoria_proyecto_final_idnp.signup;
+package com.idnp.tutoria_proyecto_final_idnp.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,7 +11,8 @@ import android.widget.Toast;
 
 import com.idnp.tutoria_proyecto_final_idnp.R;
 import com.idnp.tutoria_proyecto_final_idnp.UsersSQLiteOpenHelper;
-import com.idnp.tutoria_proyecto_final_idnp.secondregister.SecondRegisterView;
+import com.idnp.tutoria_proyecto_final_idnp.interfaces.SignUp;
+import com.idnp.tutoria_proyecto_final_idnp.presenters.SignUpPresenter;
 
 public class SignUpView extends AppCompatActivity implements SignUp.View {
 

@@ -1,6 +1,8 @@
-package com.idnp.tutoria_proyecto_final_idnp.signup;
+package com.idnp.tutoria_proyecto_final_idnp.presenters;
 
 import com.idnp.tutoria_proyecto_final_idnp.UsersSQLiteOpenHelper;
+import com.idnp.tutoria_proyecto_final_idnp.interfaces.SignUp;
+import com.idnp.tutoria_proyecto_final_idnp.interactors.SignUpModel;
 
 public class SignUpPresenter implements SignUp.Presenter {
 

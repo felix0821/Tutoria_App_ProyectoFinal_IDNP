@@ -1,9 +1,12 @@
-package com.idnp.tutoria_proyecto_final_idnp.forum;
+package com.idnp.tutoria_proyecto_final_idnp.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.idnp.tutoria_proyecto_final_idnp.ForumSQLiteOpenHelper;
 import com.idnp.tutoria_proyecto_final_idnp.R;
+import com.idnp.tutoria_proyecto_final_idnp.interactors.Comment;
+import com.idnp.tutoria_proyecto_final_idnp.interfaces.Forum;
+import com.idnp.tutoria_proyecto_final_idnp.presenters.ForumPresenter;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -16,7 +19,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 

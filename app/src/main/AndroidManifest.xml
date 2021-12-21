@@ -13,21 +13,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tutoria_Proyecto_Final_IDNP">
         <activity
-            android:name=".forum.ForumView"
+            android:name=".views.ForumView"
             android:exported="true"
             android:label="@string/title_activity_forum_view"
             android:theme="@style/Theme.Tutoria_Proyecto_Final_IDNP.NoActionBar" />
         <activity
-            android:name=".secondregister.SecondRegisterView"
+            android:name=".views.SecondRegisterView"
             android:exported="true" />
         <activity
-            android:name=".signup.SignUpView"
+            android:name=".views.SignUpView"
             android:exported="true" />
         <activity
-            android:name=".login.LoginView"
+            android:name=".views.LoginView"
             android:exported="true" />
         <activity
-            android:name=".main.MainView"
+            android:name=".views.MainView"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

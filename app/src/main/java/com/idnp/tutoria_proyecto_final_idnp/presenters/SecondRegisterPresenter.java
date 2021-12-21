@@ -1,9 +1,11 @@
-package com.idnp.tutoria_proyecto_final_idnp.secondregister;
+package com.idnp.tutoria_proyecto_final_idnp.presenters;
 
 import android.location.Geocoder;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.idnp.tutoria_proyecto_final_idnp.UsersSQLiteOpenHelper;
+import com.idnp.tutoria_proyecto_final_idnp.interfaces.SecondRegister;
+import com.idnp.tutoria_proyecto_final_idnp.interactors.SecondRegisterModel;
 
 public class SecondRegisterPresenter implements SecondRegister.Presenter {
 

@@ -1,6 +1,9 @@
-package com.idnp.tutoria_proyecto_final_idnp.main;
+package com.idnp.tutoria_proyecto_final_idnp.interactors;
 
 import android.content.SharedPreferences;
+
+import com.idnp.tutoria_proyecto_final_idnp.interactors.MainModel;
+import com.idnp.tutoria_proyecto_final_idnp.interfaces.Main;
 
 public class MainPresenter implements Main.Presenter{
 

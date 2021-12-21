@@ -1,7 +1,10 @@
-package com.idnp.tutoria_proyecto_final_idnp.forum;
+package com.idnp.tutoria_proyecto_final_idnp.presenters;
 
 
 import android.content.SharedPreferences;
+
+import com.idnp.tutoria_proyecto_final_idnp.interactors.ForumModel;
+import com.idnp.tutoria_proyecto_final_idnp.interfaces.Forum;
 
 public class ForumPresenter implements Forum.Presenter{
     private Forum.View view;

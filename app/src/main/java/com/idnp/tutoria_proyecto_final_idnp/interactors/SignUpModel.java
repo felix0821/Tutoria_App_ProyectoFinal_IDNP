@@ -1,11 +1,11 @@
-package com.idnp.tutoria_proyecto_final_idnp.signup;
+package com.idnp.tutoria_proyecto_final_idnp.interactors;
 
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.widget.Toast;
 
 import com.idnp.tutoria_proyecto_final_idnp.UsersSQLiteOpenHelper;
+import com.idnp.tutoria_proyecto_final_idnp.interfaces.SignUp;
 
 public class SignUpModel implements SignUp.Model {
 

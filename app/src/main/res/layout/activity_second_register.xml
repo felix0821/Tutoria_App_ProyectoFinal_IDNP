@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/depositphotos_55447983_stock_photo_abstract_light_blue_background"
-    tools:context=".secondregister.SecondRegisterView">
+    tools:context=".views.SecondRegisterView">
 
     <ScrollView
         android:layout_width="match_parent"
