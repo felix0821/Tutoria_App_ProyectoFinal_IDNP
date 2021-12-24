@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Tutoria_Proyecto_Final_IDNP" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.Tutoria_Proyecto_Final_IDNP" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -14,12 +14,9 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="Theme.Tutoria_Proyecto_Final_IDNP.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+    <style name="BottomNavigation">
+        <item name="android:background">@color/green_dark</item>
+        <item name="itemIconTint">@color/green_light</item>
+        <item name="itemTextColor">@color/green_light_2</item>
     </style>
-
-    <style name="Theme.Tutoria_Proyecto_Final_IDNP.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="Theme.Tutoria_Proyecto_Final_IDNP.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "483011064054",
+    "project_id": "tutoria-proyecto-final-idnp",
+    "storage_bucket": "tutoria-proyecto-final-idnp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:483011064054:android:95af42a3eccd064ab63cd7",
+        "android_client_info": {
+          "package_name": "com.idnp.tutoria_proyecto_final_idnp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "483011064054-630mqjr3k8t5uj331ds56cio27le2hue.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.idnp.tutoria_proyecto_final_idnp",
+            "certificate_hash": "4d7896716eed164f715b6c0e1377fdd04b41ae96"
+          }
+        },
+        {
+          "client_id": "483011064054-ahfacvohs03rqn9t4eij7bjn7u9fd4vk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTC9RHOAE7x4trOE6fkwKgDWrqDOXYzCo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "483011064054-ahfacvohs03rqn9t4eij7bjn7u9fd4vk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

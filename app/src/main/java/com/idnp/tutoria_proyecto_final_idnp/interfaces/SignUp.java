@@ -1,5 +1,6 @@
 package com.idnp.tutoria_proyecto_final_idnp.interfaces;
 
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.idnp.tutoria_proyecto_final_idnp.UsersSQLiteOpenHelper;
 
 public interface SignUp {
@@ -10,7 +11,7 @@ public interface SignUp {
     }
 
     interface Presenter{
-        void register(UsersSQLiteOpenHelper admin, String username,
+        void register(FirebaseFirestore db, UsersSQLiteOpenHelper admin, String username,
                       String email,
                       String name,
                       String paternalSurname,
@@ -24,7 +25,7 @@ public interface SignUp {
     }
 
     interface Model{
-        void register(UsersSQLiteOpenHelper admin, String username,
+        void register(FirebaseFirestore db, UsersSQLiteOpenHelper admin, String username,
                       String email,
                       String name,
                       String paternalSurname,

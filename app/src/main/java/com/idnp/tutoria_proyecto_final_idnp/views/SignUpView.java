@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.idnp.tutoria_proyecto_final_idnp.R;
 import com.idnp.tutoria_proyecto_final_idnp.UsersSQLiteOpenHelper;
 import com.idnp.tutoria_proyecto_final_idnp.interfaces.SignUp;
@@ -23,6 +24,7 @@ public class SignUpView extends AppCompatActivity implements SignUp.View {
     private SignUp.Presenter presenter;
 
     private UsersSQLiteOpenHelper admin;
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +47,7 @@ public class SignUpView extends AppCompatActivity implements SignUp.View {
     }
 
     public void register(View view){
-        presenter.register(admin, etUsername.getText().toString(),
+        presenter.register(db, admin, etUsername.getText().toString(),
                 etEmail.getText().toString(),
                 etName.getText().toString(),
                 etPaternalSurname.getText().toString(),

@@ -1,7 +1,5 @@
 package com.idnp.tutoria_proyecto_final_idnp.views;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -9,11 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.idnp.tutoria_proyecto_final_idnp.R;
-import com.idnp.tutoria_proyecto_final_idnp.interfaces.Main;
-import com.idnp.tutoria_proyecto_final_idnp.interactors.MainPresenter;
+import androidx.appcompat.app.AppCompatActivity;
 
-public class MainView extends AppCompatActivity implements Main.View {
+import com.idnp.tutoria_proyecto_final_idnp.R;
+import com.idnp.tutoria_proyecto_final_idnp.interactors.MainPresenter;
+import com.idnp.tutoria_proyecto_final_idnp.interfaces.Main;
+
+public class MainViewCopy extends AppCompatActivity implements Main.View {
 
     private TextView tvSesion;
 
@@ -31,10 +31,10 @@ public class MainView extends AppCompatActivity implements Main.View {
         presenter.chargePreferences(session);
     }
 
-    public void forum(View view){
+    /*public void forum(View view){
         Intent forum = new Intent(this, ForumView.class);
         startActivity(forum);
-    }
+    }*/
 
     public void login(View view){
         Intent login = new Intent(this, LoginView.class);

@@ -13,11 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tutoria_Proyecto_Final_IDNP">
         <activity
-            android:name=".views.ForumView"
-            android:exported="true"
-            android:label="@string/title_activity_forum_view"
-            android:theme="@style/Theme.Tutoria_Proyecto_Final_IDNP.NoActionBar" />
-        <activity
             android:name=".views.SecondRegisterView"
             android:exported="true" />
         <activity
@@ -27,7 +22,7 @@
             android:name=".views.LoginView"
             android:exported="true" />
         <activity
-            android:name=".views.MainView"
+            android:name=".views.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
