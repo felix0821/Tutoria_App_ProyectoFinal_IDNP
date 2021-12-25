@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,10 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 import com.idnp.tutoria_proyecto_final_idnp.ForumSQLiteOpenHelper;
 import com.idnp.tutoria_proyecto_final_idnp.R;
 import com.idnp.tutoria_proyecto_final_idnp.interactors.Comment;
@@ -25,6 +30,7 @@ import com.idnp.tutoria_proyecto_final_idnp.interfaces.Forum;
 import com.idnp.tutoria_proyecto_final_idnp.presenters.ForumPresenter;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -49,6 +55,8 @@ public class ForumFragmentView extends Fragment implements Forum.View{
     private Forum.Presenter presenter;
     SharedPreferences session;
     private ArrayList<Comment> comments;
+    private List<DocumentSnapshot> foro;
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     public ForumFragmentView() {
         // Required empty public constructor
@@ -97,13 +105,42 @@ public class ForumFragmentView extends Fragment implements Forum.View{
         presenter = new ForumPresenter(this);
         session = getContext().getSharedPreferences("session", Context.MODE_PRIVATE);
         presenter.chargePreferences(session);
-        //final ForumSQLiteOpenHelper bd = new ForumSQLiteOpenHelper(this);
-        //comments = bd.selectComments();
+
+        /*db.collection("forums").get()
+                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                    @Override
+                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                        foro = queryDocumentSnapshots.getDocuments();
+                        ArrayList<String> comms = new ArrayList<>();
+                        for(int i = 0; i<foro.size(); i++)
+                        {
+                            comms.add(foro.get(i).)
+                        }
+
+
+                        if(queryDocumentSnapshots.getDocuments().get(0).exists()){
+                            SharedPreferences.Editor editor = session.edit();
+                            editor.putString("username", queryDocumentSnapshots.getDocuments().get(0).getString("username"));
+                            Log.d("Nombre", "Usuario:"+ queryDocumentSnapshots.getDocuments().get(0).getString("username"));
+                            editor.putString("name", queryDocumentSnapshots.getDocuments().get(0).getString("name"));
+                            editor.putString("paternalSurname", queryDocumentSnapshots.getDocuments().get(0).getString("paternalSurname"));
+                            editor.putBoolean("remember", remember);
+                            editor.commit();
+
+                            presenter.showMessage(1);
+                        }
+
+                    }
+                });*/
+
+
+        final ForumSQLiteOpenHelper bd = new ForumSQLiteOpenHelper(getContext());
+        comments = bd.selectComments();
         ArrayList<String> comms = new ArrayList<>();
-        /*for(int i=0;i<comments.size();i++){
+        for(int i=0;i<comments.size();i++){
             comms.add(commentFormat(comments.get(i)));
         }
-        listViewArray(comms);*/
+        listViewArray(comms);
 
         // Agregar listener al botón
         sendButton.setOnClickListener(new View.OnClickListener() {
@@ -123,17 +160,17 @@ public class ForumFragmentView extends Fragment implements Forum.View{
                 }
                 String user = tvSesion.getText().toString();
                 Comment cm = new Comment(user, comment);
-                //bd.insertComment(cm);
-                //comms.add(commentFormat(cm));
-                //listViewArray(comms);
+                bd.insertComment(cm);
+                comms.add(commentFormat(cm));
+                listViewArray(comms);
                 etComment.setText("");
             }
         });
     }
 
-    /*private void listViewArray(ArrayList<String> comms){
+    private void listViewArray(ArrayList<String> comms){
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>
-                (this, android.R.layout.simple_list_item_1, comms){
+                (getContext(), android.R.layout.simple_list_item_1, comms){
             @Override
             public View getView(int position, View convertView, ViewGroup parent){
                 // Get the Item from ListView
@@ -151,7 +188,7 @@ public class ForumFragmentView extends Fragment implements Forum.View{
         };
         ltSession.setAdapter(arrayAdapter);
         ltSession.setSelection(ltSession.getAdapter().getCount()-1);
-    }*/
+    }
 
     private String commentFormat(Comment comment){
         return comment.getUser()+": "+comment.getComment();

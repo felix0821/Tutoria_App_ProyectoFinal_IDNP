@@ -8,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -94,22 +95,19 @@ public class LoginFragmentView extends Fragment implements Login.View{
         cbRemember = (CheckBox) view.findViewById(R.id.cbRemember);
 
         //admin = new UsersSQLiteOpenHelper(this,"tutoria", null, 1);
-
+        Log.d("Nombre", "Usuario2:creado");
         presenter = new LoginPresenter(this);
         btnLogin = (Button) view.findViewById(R.id.btnLogin);
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Log.d("Nombre", "Usuario2:"+etUsername.getText().toString());
                 SharedPreferences session = getContext().getSharedPreferences("session", Context.MODE_PRIVATE);
                 presenter.login(db, admin, session, etUsername.getText().toString(), etPassword.getText().toString(), cbRemember.isChecked());
             }
         });
     }
 
-    /*public void login(View view){
-        SharedPreferences session = getContext().getSharedPreferences("session", Context.MODE_PRIVATE);
-        presenter.login(admin, session, etUsername.getText().toString(), etPassword.getText().toString(), cbRemember.isChecked());
-    }*/
 
     @Override
     public void showMessage(int code) {

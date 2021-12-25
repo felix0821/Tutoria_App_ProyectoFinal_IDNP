@@ -32,10 +32,8 @@ public class LoginModel implements Login.Model {
 
     @Override
     public void login(FirebaseFirestore db, UsersSQLiteOpenHelper admin, SharedPreferences session, String username, String password, boolean remember) {
-        SQLiteDatabase database = admin.getWritableDatabase();
-
+        Log.d("Nombre", "Usuario2:"+username);
         if(!username.isEmpty() && !password.isEmpty()){
-            Cursor c =database.rawQuery("select id, name, paternalSurname from users where username ='"+username+"' and password ='"+password+"'", null);
 
 
             db.collection("users").whereEqualTo("username", username).whereEqualTo("password", password).get()
@@ -45,6 +43,7 @@ public class LoginModel implements Login.Model {
                             if(queryDocumentSnapshots.getDocuments().get(0).exists()){
                                 SharedPreferences.Editor editor = session.edit();
                                 editor.putString("username", queryDocumentSnapshots.getDocuments().get(0).getString("username"));
+                                Log.d("Nombre", "Usuario:"+ queryDocumentSnapshots.getDocuments().get(0).getString("username"));
                                 editor.putString("name", queryDocumentSnapshots.getDocuments().get(0).getString("name"));
                                 editor.putString("paternalSurname", queryDocumentSnapshots.getDocuments().get(0).getString("paternalSurname"));
                                 editor.putBoolean("remember", remember);
