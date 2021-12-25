@@ -21,15 +21,17 @@
                 android:id="@+id/idUsername"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Usuario"
-                android:textStyle="bold"
-                android:textSize="15sp"
+                android:layout_marginTop="5dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginTop="5dp"/>
+                android:color="@color/black"
+                android:text="Usuario"
+                android:textSize="15sp"
+                android:textStyle="bold" />
             <TextView
                 android:id="@+id/idComment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:color="@color/black"
                 android:text="Comentario"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="5dp"/>

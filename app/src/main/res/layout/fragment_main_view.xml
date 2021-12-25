@@ -8,8 +8,8 @@
 
 
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
         android:layout_marginTop="1dp"
         android:background="@drawable/paisaje"
@@ -41,7 +41,7 @@
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:backgroundTint="#862196F3"
+            android:backgroundTint="@drawable/diseno_botoncircular_inicio"
             android:id="@+id/btnLogin"
             android:text="Iniciar Sesión"
             android:textAlignment="center"
@@ -51,7 +51,7 @@
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:backgroundTint="#862196F3"
+            android:backgroundTint="@drawable/diseno_botoncircular_inicio"
             android:id="@+id/btnSignIn"
             android:text="Registrarse"
             android:textAlignment="center"
@@ -60,7 +60,7 @@
         <Button
             android:layout_width="160dp"
             android:layout_height="wrap_content"
-            android:backgroundTint="#862196F3"
+            android:backgroundTint="@drawable/diseno_botoncircular_inicio"
             android:id="@+id/btnSignOut"
             android:text="Cerrar Sesión"
             android:textAlignment="center"
