@@ -13,11 +13,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import com.idnp.tutoria_proyecto_final_idnp.R;
-import com.idnp.tutoria_proyecto_final_idnp.interactors.MainPresenter;
+import com.idnp.tutoria_proyecto_final_idnp.presenters.MainPresenter;
 import com.idnp.tutoria_proyecto_final_idnp.interfaces.Main;
 
 /**
@@ -91,7 +90,7 @@ public class MainFragmentView extends Fragment implements Main.View{
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent signUp = new Intent(getContext(), SignUpView.class);
+                Intent signUp = new Intent(getContext(), SesionActivity.class);
                 startActivity(signUp);
             }
         });
@@ -100,7 +99,7 @@ public class MainFragmentView extends Fragment implements Main.View{
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent login = new Intent(getContext(), LoginView.class);
+                Intent login = new Intent(getContext(), SesionActivity.class);
                 startActivity(login);
             }
         });
@@ -113,8 +112,8 @@ public class MainFragmentView extends Fragment implements Main.View{
             }
         });
 
-        //session = getContext().getSharedPreferences("session", Context.MODE_PRIVATE);
-        //presenter.chargePreferences(session);
+        session = getContext().getSharedPreferences("session", Context.MODE_PRIVATE);
+        presenter.chargePreferences(session);
     }
 
     @Override

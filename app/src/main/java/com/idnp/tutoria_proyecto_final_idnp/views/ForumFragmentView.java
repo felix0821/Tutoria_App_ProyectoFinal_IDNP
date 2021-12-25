@@ -95,8 +95,8 @@ public class ForumFragmentView extends Fragment implements Forum.View{
         etComment =  (EditText) view.findViewById(R.id.addComment);
         sendButton = (Button) view.findViewById(R.id.sendButton);
         presenter = new ForumPresenter(this);
-        //session = getSharedPreferences("session", Context.MODE_PRIVATE);
-        //presenter.chargePreferences(session);
+        session = getContext().getSharedPreferences("session", Context.MODE_PRIVATE);
+        presenter.chargePreferences(session);
         //final ForumSQLiteOpenHelper bd = new ForumSQLiteOpenHelper(this);
         //comments = bd.selectComments();
         ArrayList<String> comms = new ArrayList<>();

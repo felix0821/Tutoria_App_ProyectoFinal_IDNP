@@ -1,4 +1,4 @@
-package com.idnp.tutoria_proyecto_final_idnp.interactors;
+package com.idnp.tutoria_proyecto_final_idnp.presenters;
 
 import android.content.SharedPreferences;
 

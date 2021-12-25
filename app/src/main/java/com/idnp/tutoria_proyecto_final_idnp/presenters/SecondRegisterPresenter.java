@@ -3,6 +3,7 @@ package com.idnp.tutoria_proyecto_final_idnp.presenters;
 import android.location.Geocoder;
 
 import com.google.android.gms.maps.GoogleMap;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.idnp.tutoria_proyecto_final_idnp.UsersSQLiteOpenHelper;
 import com.idnp.tutoria_proyecto_final_idnp.interfaces.SecondRegister;
 import com.idnp.tutoria_proyecto_final_idnp.interactors.SecondRegisterModel;
@@ -28,8 +29,8 @@ public class SecondRegisterPresenter implements SecondRegister.Presenter {
     }
 
     @Override
-    public void register(UsersSQLiteOpenHelper admin, String[] data, boolean cb1, boolean cb2, boolean cb3, double lat, double lon, String address) {
-        model.register(admin, data, cb1, cb2, cb3, lat, lon, address);
+    public void register(FirebaseFirestore db, UsersSQLiteOpenHelper admin, String[] data, boolean cb1, boolean cb2, boolean cb3, double lat, double lon, String address) {
+        model.register(db, admin, data, cb1, cb2, cb3, lat, lon, address);
     }
 
     @Override

@@ -40,13 +40,13 @@ public class SignUpModel implements SignUp.Model {
                     database.insert("users", null, registry);*/
 
                     HashMap<String,Object> usuarios = new HashMap<String,Object>();
-                    usuarios.put("email", email);
+                    usuarios.put("username", username);
                     usuarios.put("name", name);
                     usuarios.put("paternalSurname", paternalSurname);
                     usuarios.put("maternalSurname", maternalSurname);
                     usuarios.put("password", password);
                     usuarios.put("tutor",false);
-                    db.collection("users").document(username).set(usuarios);
+                    db.collection("users").document(email).set(usuarios);
                     presenter.showMessage(4);
                     database.close();
                 }
