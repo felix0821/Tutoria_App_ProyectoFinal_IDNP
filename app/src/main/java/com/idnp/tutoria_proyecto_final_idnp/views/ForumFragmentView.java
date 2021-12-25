@@ -48,7 +48,6 @@ public class ForumFragmentView extends Fragment implements Forum.View{
     private String mParam2;
 
     private TextView tvSesion;
-    private ListView ltSession;
     private EditText etComment;
     private Button sendButton;
     private Forum.Presenter presenter;
