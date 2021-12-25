@@ -9,7 +9,7 @@ import android.os.Build;
 
 import androidx.annotation.Nullable;
 
-import com.idnp.tutoria_proyecto_final_idnp.interactors.Comment;
+import com.idnp.tutoria_proyecto_final_idnp.interactors.CommentVo;
 
 import java.util.ArrayList;
 
@@ -41,19 +41,19 @@ public class ForumSQLiteOpenHelper extends SQLiteOpenHelper {
             }
         }
     }
-    public void insertComment(Comment cm){
+    public void insertComment(CommentVo cm){
         db.insert(Tables.BD_COMMENT, null, generateValuesComment(cm));
     }
 
-    private ContentValues generateValuesComment(Comment comment){
+    private ContentValues generateValuesComment(CommentVo comment){
         ContentValues values = new ContentValues();
         values.put(BDApp.ColumnComment.USER, comment.getUser());
         values.put(BDApp.ColumnComment.COMMENT, comment.getComment());
         return values;
     }
 
-    public ArrayList<Comment> selectComments(){
-        ArrayList<Comment> cmms = new ArrayList<>();
+    public ArrayList<CommentVo> selectComments(){
+        ArrayList<CommentVo> cmms = new ArrayList<>();
         String sql = String.format("SELECT * FROM %s", Tables.BD_COMMENT);
         Cursor cursor = db.rawQuery(sql,null);
         if(cursor == null){
@@ -61,7 +61,7 @@ public class ForumSQLiteOpenHelper extends SQLiteOpenHelper {
         }
         if(cursor.moveToFirst()){
             do{
-                Comment cm = new Comment();
+                CommentVo cm = new CommentVo();
                 cm.setUser(cursor.getString(1));
                 cm.setComment(cursor.getString(2));
                 cmms.add(cm);

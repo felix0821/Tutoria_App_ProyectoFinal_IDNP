@@ -10,10 +10,13 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.GeoPoint;
 import com.idnp.tutoria_proyecto_final_idnp.UsersSQLiteOpenHelper;
 import com.idnp.tutoria_proyecto_final_idnp.interfaces.SecondRegister;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
 
 public class SecondRegisterModel implements SecondRegister.Model {
@@ -45,8 +48,8 @@ public class SecondRegisterModel implements SecondRegister.Model {
     }
 
     @Override
-    public void register(UsersSQLiteOpenHelper admin, String[] data, boolean cb1, boolean cb2, boolean cb3, double lat, double lon, String address) {
-        SQLiteDatabase database = admin.getWritableDatabase();
+    public void register(FirebaseFirestore db, UsersSQLiteOpenHelper admin, String[] data, boolean cb1, boolean cb2, boolean cb3, double lat, double lon, String address) {
+        /*SQLiteDatabase database = admin.getWritableDatabase();
         Cursor c = database.rawQuery("select * from users",null);
         int id = c.getCount()+1;
         ContentValues registry = new ContentValues();
@@ -78,8 +81,39 @@ public class SecondRegisterModel implements SecondRegister.Model {
         registry.put("latitud", lat);
         registry.put("longitud", lon);
         registry.put("address",address);
-        database.insert("users", null, registry);
+        database.insert("users", null, registry);*/
+
+
+        HashMap<String,Object> usuarios = new HashMap<String,Object>();
+        usuarios.put("username", data[0]);
+        usuarios.put("name", data[2]);
+        usuarios.put("paternalSurname", data[3]);
+        usuarios.put("maternalSurname", data[4]);
+        usuarios.put("password", data[5]);
+        usuarios.put("tutor", true);
+        if(cb1){
+            usuarios.put("teachingArea1",1);
+        }
+        else{
+            usuarios.put("teachingArea1",0);
+        }
+        if(cb2){
+            usuarios.put("teachingArea2",1);
+        }
+        else{
+            usuarios.put("teachingArea2",0);
+        }
+        if(cb3){
+            usuarios.put("teachingArea3",1);
+        }
+        else{
+            usuarios.put("teachingArea3",0);
+        }
+        usuarios.put("localizacion", new GeoPoint(lat, lon));
+        usuarios.put("direccion", address);
+        db.collection("users").document(data[1]).set(usuarios);
+
         presenter.showMessage(4);
-        database.close();
+        //database.close();
     }
 }
