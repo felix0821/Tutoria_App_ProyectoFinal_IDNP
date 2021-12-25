@@ -87,15 +87,6 @@ public class MainFragmentView extends Fragment implements Main.View{
         tvSesion = (TextView) view.findViewById(R.id.tvSesion);
         presenter = new MainPresenter(this);
 
-        btnSignIn = (Button) view.findViewById(R.id.btnSignIn);
-        btnSignIn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent signUp = new Intent(getContext(), SesionActivity.class);
-                startActivity(signUp);
-            }
-        });
-
         btnLogin = (Button) view.findViewById(R.id.btnLogin);
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override

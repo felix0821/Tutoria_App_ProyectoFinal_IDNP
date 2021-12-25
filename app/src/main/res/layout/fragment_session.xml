@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.SessionFragment">
+    android:background="@drawable/depositphotos_55447983_stock_photo_abstract_light_blue_background"
+    tools:context=".views.SessionFragmentView">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -26,7 +28,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:text="Registrar sesion"
-                    android:textColor="#33F"
+                    android:textColor="#070707"
                     android:textSize="25sp"
 
                     />
@@ -44,7 +46,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Título"
-                    android:textSize="20sp"/>
+                    android:textColor="#070707"
+                    android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/etTitulo"
@@ -52,7 +55,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
-                    />
+                    android:textColor="#070707" />
 
             </LinearLayout>
 
@@ -68,14 +71,15 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Descripción"
-                    android:textSize="20sp"/>
+                    android:textColor="#070707"
+                    android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/etDescripcion"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:inputType="textMultiLine"
-                    />
+                    android:textColor="#070707" />
 
 
             </LinearLayout>
@@ -91,7 +95,8 @@
                     android:layout_width="136dp"
                     android:layout_height="wrap_content"
                     android:text="Localización"
-                    android:textSize="20sp"/>
+                    android:textColor="#070707"
+                    android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/etLocation"
@@ -99,7 +104,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
-                    />
+                    android:textColor="#070707" />
 
             </LinearLayout>
 
@@ -116,6 +121,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Año"
+                    android:textColor="#070707"
                     android:textSize="20sp" />
 
                 <EditText
@@ -125,29 +131,29 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:inputType="number"
-                    />
+                    android:textColor="#070707" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="41dp"
-                android:layout_margin="10dp"
-                android:layout_weight="0.05"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/textView3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-
+                    android:layout_margin="15dp"
                     android:text="Mes"
+                    android:textColor="#070707"
                     android:textSize="20sp" />
 
                 <Spinner
                     android:id="@+id/spMes"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_margin="15dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -163,6 +169,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Dia"
+                    android:textColor="#070707"
                     android:textSize="20sp" />
 
                 <EditText
@@ -172,7 +179,7 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:inputType="number"
-                    />
+                    android:textColor="#070707" />
             </LinearLayout>
 
             <LinearLayout
@@ -186,7 +193,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:text="Todo el dia" />
+                    android:text="Todo el dia"
+                    android:textColor="#070707" />
             </LinearLayout>
 
             <LinearLayout
@@ -199,13 +207,14 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="15dp"
                     android:text="Hora"
+                    android:textColor="#070707"
                     android:textSize="20sp" />
 
                 <Spinner
                     android:id="@+id/spHora"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="15dp"/>
+                    android:layout_margin="15dp" />
 
 
             </LinearLayout>
@@ -220,8 +229,8 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="15dp"
                     android:text="Minuto"
-                    android:textSize="20sp"
-                    />
+                    android:textColor="#070707"
+                    android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/etMinuto"
@@ -229,7 +238,8 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="15dp"
                     android:inputType="number"
-                    />
+                    android:text="0"
+                    android:textColor="#070707" />
 
             </LinearLayout>
 
@@ -255,4 +265,4 @@
 
     </ScrollView>
 
-</FrameLayout>
+</RelativeLayout>

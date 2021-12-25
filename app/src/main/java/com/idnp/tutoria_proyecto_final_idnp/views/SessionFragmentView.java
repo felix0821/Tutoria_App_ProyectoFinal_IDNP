@@ -25,10 +25,10 @@ import java.util.Calendar;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link SessionFragment#newInstance} factory method to
+ * Use the {@link SessionFragmentView#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class SessionFragment extends Fragment {
+public class SessionFragmentView extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -50,7 +50,7 @@ public class SessionFragment extends Fragment {
     EditText descripcion = null;
     EditText localizacion = null;
 
-    public SessionFragment() {
+    public SessionFragmentView() {
         // Required empty public constructor
     }
 
@@ -63,8 +63,8 @@ public class SessionFragment extends Fragment {
      * @return A new instance of fragment SessionFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static SessionFragment newInstance(String param1, String param2) {
-        SessionFragment fragment = new SessionFragment();
+    public static SessionFragmentView newInstance(String param1, String param2) {
+        SessionFragmentView fragment = new SessionFragmentView();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -102,16 +102,17 @@ public class SessionFragment extends Fragment {
         localizacion = (EditText) view.findViewById(R.id.etLocation);
         agregar = (Button) view.findViewById(R.id.addSessionButton);
 
-        ArrayAdapter<CharSequence> adapmes = ArrayAdapter.createFromResource(getContext(), R.array.meses,android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapmes = ArrayAdapter.createFromResource(getContext(), R.array.meses,  R.layout.spinner_item);
         mes.setAdapter(adapmes); //Llenar Spinner de mes
 
-        ArrayAdapter<CharSequence> adaphora = ArrayAdapter.createFromResource(getContext(), R.array.horas,android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adaphora = ArrayAdapter.createFromResource(getContext(), R.array.horas,  R.layout.spinner_item);
         hora.setAdapter(adaphora);//Llenar Spinner de horas
 
         agregar.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
+
                 createSession();
             }
         });
@@ -151,7 +152,7 @@ public class SessionFragment extends Fragment {
             } catch (Exception e) {
                 año.setText("");
                 dia.setText("");
-                Toast.makeText(getActivity().getApplicationContext(), "Fecha Inválida", Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), "Fecha Inválida", Toast.LENGTH_LONG).show();
             }
         }
 

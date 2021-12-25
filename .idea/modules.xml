@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Tutoria_Proyecto_Final_IDNP.iml" filepath="$PROJECT_DIR$/.idea/modules/Tutoria_Proyecto_Final_IDNP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Tutoria_Proyecto_Final_IDNP.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Tutoria_Proyecto_Final_IDNP.app.iml" />
+    </modules>
+  </component>
+</project>

@@ -102,6 +102,7 @@ public class ForumFragmentView extends Fragment implements Forum.View{
         sendButton = (Button) view.findViewById(R.id.sendButton);
         presenter = new ForumPresenter(this);
         session = getContext().getSharedPreferences("session", Context.MODE_PRIVATE);
+        recycler = (RecyclerView) view.findViewById(R.id.recyclerComments);
         presenter.chargePreferences(session);
 
         /*db.collection("forums").get()

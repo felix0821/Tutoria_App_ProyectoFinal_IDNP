@@ -14,7 +14,7 @@ import com.idnp.tutoria_proyecto_final_idnp.R;
 public class MainActivity extends AppCompatActivity {
 
     MainFragmentView mainFragment = new MainFragmentView();
-    //MapsFragmentView mapsFragment = new MapsFragmentView();
+    SessionFragmentView sessionFragment = new SessionFragmentView();
     ForumFragmentView forumFragment = new ForumFragmentView();
 
     @Override
@@ -34,9 +34,9 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.mainFragment:
                     loadFragment(mainFragment);
                     return true;
-                /*case R.id.mapsFragment:
-                    loadFragment(mapsFragment);
-                    return true;*/
+                case R.id.mapsFragment:
+                    loadFragment(sessionFragment);
+                    return true;
                 case R.id.forumFragment:
                     loadFragment(forumFragment);
                     return true;
